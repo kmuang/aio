@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> All in One</title> 
+  <link rel="shortcut icon" href="img/logo.jpeg" type="image/jpg">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #333;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Grid layout for links */
+    .links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .link-button {
+      text-decoration: none;
+      padding: 15px 20px;
+      background-color: #4f46e5;
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .link-button:hover {
+      background-color: #3730a3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      color: #999;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .links {
+        grid-template-columns: 1fr;
+      }
+      .link-button {
+        font-size: 1rem;
+        padding: 12px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> All Projects</h1>
+    <p>All your important links in one place</p>
+  </header>
+
+  <div class="links">
+    <a href="https://github.com" class="link-button" target="_blank">GitHub</a>
+    <a href="https://linkedin.com" class="link-button" target="_blank">LinkedIn</a>
+    <a href="https://twitter.com" class="link-button" target="_blank">Twitter</a>
+    <a href="https://facebook.com" class="link-button" target="_blank">Facebook</a>
+    <a href="https://example.com" class="link-button" target="_blank">My Website</a>
+    <a href="https://instagram.com" class="link-button" target="_blank">Instagram</a>
+    <a href="https://youtube.com" class="link-button" target="_blank">YouTube</a>
+    <a href="https://stackoverflow.com" class="link-button" target="_blank">Stack Overflow</a>
+    <a href="https://medium.com" class="link-button" target="_blank">Medium</a>
+  </div>
+
+  <footer>
+    &copy; 2025 Projects. All rights reserved.
+  </footer>
+</body>
+</html>
