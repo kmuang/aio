@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All in One Projects</title>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class', // enable class-based dark mode
-    }
+    tailwind.config = { darkMode: 'class' };
   </script>
 
   <!-- Bootstrap Icons -->
@@ -27,92 +25,117 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
       background-size: 22px 22px;
       z-index: -1;
     }
-
     .link-card {
-      transition: all 0.3s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
-
     .link-card:hover {
-      transform: translateY(-4px) scale(1.05);
+      transform: translateY(-2px) scale(1.03);
     }
-
     .category {
       border-left: 4px solid #1e40af;
       padding-left: 10px;
     }
   </style>
 </head>
-
 <body class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 dark:bg-gray-900 dark:text-gray-100 text-gray-900 flex flex-col min-h-screen font-sans transition-colors duration-500">
 
   <!-- Header -->
-  <header class="text-center py-10 bg-blue-700/95 dark:bg-gray-800 text-white shadow-lg relative transition-colors duration-500">
-    <img src="img/logo.jpeg" class="ml-2 rounded-full" alt="Logo" width="40" height="40" />
-    <h1 class="text-4xl sm:text-5xl font-extrabold mb-3 tracking-tight drop-shadow-md">All in One Projects</h1>
+  <header class="text-center py-8 bg-blue-700/95 dark:bg-gray-800 text-white shadow-lg relative transition-colors duration-500">
+    <img src="img/logo.jpeg" class="ml-2 rounded-full" alt="Logo" width="40" height="40">
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight drop-shadow-md">All in One Projects</h1>
     <p class="text-base sm:text-lg text-blue-100 dark:text-gray-300">Explore all creations organized beautifully by category</p>
-    <!-- Dark mode toggle -->
-    <button id="darkModeToggle" class="absolute top-11 right-4 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-full shadow-md hover:opacity-80 transition-opacity">
-      🌙 
+    <button id="darkModeToggle" class="absolute top-10 right-4 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full shadow-md hover:opacity-80 transition-opacity">
+      🌙
     </button>
   </header>
 
-  <!-- Main Section -->
-  <main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
-    <!-- 🎨 Creative & Design -->
+  <!-- Main -->
+  <main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+
+    <!-- Creative & Design -->
     <section>
-      <h2 class="category text-2xl font-bold text-blue-800 dark:text-blue-400 mb-6">🎨 Creative & Design</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <a href="https://kmuang.github.io/portfolio/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-briefcase"></i> Portfolio</a>
-        <a href="https://kmuang.github.io/foto/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-camera"></i> Photo Gallery</a>
-        <a href="https://kmuang.github.io/vlog/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-camera-reels"></i> Vlog Collections</a>
-        <a href="https://kmuang.github.io/cafe/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-cup-straw"></i> 🇮🇹 Milano Café</a>
-        <a href="https://kmuang.github.io/coffee/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-cup-straw"></i> My First Coffee Shop</a>
+      <h2 class="category text-xl font-bold text-blue-800 dark:text-blue-400 mb-2">🎨 Creative & Design</h2>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://kmuang.github.io/portfolio/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-briefcase"></i> Portfolio</a>
+        <a href="https://kmuang.github.io/foto/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-camera"></i> Photo Gallery</a>
+        <a href="https://kmuang.github.io/vlog/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-camera-reels"></i> Vlog</a>
+        <a href="https://kmuang.github.io/cafe/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-cup-straw"></i> Milano Café</a>
+        <a href="https://kmuang.github.io/coffee/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-cup-straw"></i> Coffee Shop</a>
       </div>
     </section>
 
-    <!-- 🏫 Education & Religion -->
+    <!-- Education & Religion -->
     <section>
-      <h2 class="category text-2xl font-bold text-blue-800 dark:text-blue-400 mb-6">🏫 Education & Religion</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <a href="https://kmuang.github.io/school/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-book"></i> School</a>
-        <a href="https://kmuang.github.io/cd/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-folder"></i> Zomi Catholic Directory</a>
-        <a href="https://kmuang.github.io/church/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-cross"></i> Church</a>
-        <a href="https://kmuang.github.io/catholiclabu/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-bookmark-heart"></i> Catholic Labu</a>
-        <a href="https://kmuang.github.io/prayers/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-heart"></i> Prayers</a>
+      <h2 class="category text-xl font-bold text-blue-800 dark:text-blue-400 mb-2">🏫 Education & Religion</h2>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://kmuang.github.io/school/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-book"></i> School</a>
+        <a href="https://kmuang.github.io/cd/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-folder"></i> Zomi Directory</a>
+        <a href="https://kmuang.github.io/church/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-cross"></i> Church</a>
+        <a href="https://kmuang.github.io/catholiclabu/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-bookmark-heart"></i> Catholic Labu</a>
+        <a href="https://kmuang.github.io/prayers/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-heart"></i> Prayers</a>
       </div>
     </section>
 
-    <!-- 🌍 Lifestyle & Community -->
+    <!-- Lifestyle & Community -->
     <section>
-      <h2 class="category text-2xl font-bold text-blue-800 dark:text-blue-400 mb-6">🌍 Lifestyle & Community</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <a href="https://kmuang.github.io/familydir/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-people"></i> Family Directory</a>
-        <a href="https://kmuang.github.io/culture/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-globe"></i> Culture</a>
-        <a href="https://kmuang.github.io/food/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-egg-fried"></i> Food Recipes</a>
-        <a href="https://kmuang.github.io/travel/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-airplane"></i> Travel Planner</a>
-        <a href="https://kmuang.github.io/my-travel/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-xl py-5 font-semibold text-lg shadow-md hover:bg-blue-600 dark:hover:bg-gray-600 flex justify-center items-center gap-2"><i class="bi bi-geo-alt"></i> My Travel</a>
+      <h2 class="category text-xl font-bold text-blue-800 dark:text-blue-400 mb-2">🌍 Lifestyle & Community</h2>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://kmuang.github.io/familydir/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-people"></i> Family Directory</a>
+        <a href="https://kmuang.github.io/culture/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-globe"></i> Culture</a>
+        <a href="https://kmuang.github.io/food/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-egg-fried"></i> Food Recipes</a>
+        <a href="https://kmuang.github.io/travel/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-airplane"></i> Travel Planner</a>
+        <a href="https://kmuang.github.io/my-travel/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-geo-alt"></i> My Travel</a>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-900 dark:bg-gray-800 text-blue-100 dark:text-gray-200 text-center py-6 mt-auto shadow-inner transition-colors duration-500">
-      <p class="text-sm sm:text-base">&copy; 2025 Projects. All rights reserved.</p>
-    </footer>
+    <!-- Apps & Tools -->
+    <section>
+      <h2 class="category text-xl font-bold text-blue-800 dark:text-blue-400 mb-2">💻 Apps & Tools</h2>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://kmuang.github.io/todo/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-list-check"></i> To-Do List</a>
+        <a href="https://kmuang.github.io/resume/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-person-badge"></i> Resume</a>
+        <a href="https://kmuang.github.io/quiz/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-question-circle"></i> Pop Quiz</a>
+        <a href="https://kmuang.github.io/weather/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-cloud-sun"></i> Weather</a>
+        <a href="https://kmuang.github.io/ecom/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-cart"></i> Khup Commerce</a>
+      </div>
+    </section>
+
+    <!-- Games & Fun -->
+    <section>
+      <h2 class="category text-xl font-bold text-blue-800 dark:text-blue-400 mb-2">🎮 Games & Fun</h2>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://kmuang.github.io/racing/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-car-front"></i> Jumping Car</a>
+        <a href="https://kmuang.github.io/fly/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-airplane-engines"></i> Flying Car</a>
+        <a href="https://kmuang.github.io/football/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-soccer-ball"></i> Soccer App</a>
+      </div>
+    </section>
+
+    <!-- Entertainment -->
+    <section>
+      <h2 class="category text-xl font-bold text-blue-800 dark:text-blue-400 mb-2">🎧 Entertainment</h2>
+      <div class="flex flex-wrap gap-2">
+        <a href="https://kmuang.github.io/music/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-music-note-beamed"></i> Music Player</a>
+        <a href="https://kmuang.github.io/movie/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-film"></i> Movie Reviews</a>
+        <a href="https://react-app-one-dun.vercel.app/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white dark:text-gray-200 rounded-full px-3 py-1 text-sm font-medium flex items-center gap-1"><i class="bi bi-bookmark-heart"></i> Catholic Prayer</a>
+      </div>
+    </section>
 
   </main>
 
-  <!-- Dark Mode Toggle Script -->
+  <!-- Footer -->
+  <footer class="bg-blue-900 dark:bg-gray-800 text-blue-100 dark:text-gray-200 text-center py-6 mt-auto shadow-inner transition-colors duration-500">
+    <p class="text-sm sm:text-base">&copy; 2025 Projects. All rights reserved.</p>
+  </footer>
+
+  <!-- Dark Mode Script -->
   <script>
     const toggle = document.getElementById('darkModeToggle');
     const html = document.documentElement;
-
-    toggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-    });
+    toggle.addEventListener('click', () => { html.classList.toggle('dark'); });
   </script>
 
 </body>
