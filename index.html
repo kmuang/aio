@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All in One Projects</title> 
+  <title>All in One Projects</title>
   <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,26 +23,44 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-      background-size: 22px 22px;
+      background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 10px);
+      background-size: 20px 20px;
       z-index: -1;
     }
+
+    html.dark body::before {
+      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 1px, transparent 1px, transparent 10px);
+    }
+
     .link-card {
       transition: all 0.2s ease-in-out;
+      min-height: 160px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
+
     .link-card:hover {
       transform: translateY(-3px) scale(1.05);
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 dark:bg-gray-900 dark:text-gray-100 text-gray-900 flex flex-col min-h-screen font-sans transition-colors duration-500" id="bgImage">
+
+<body
+  class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 dark:bg-gray-900 dark:text-gray-100 text-gray-900 flex flex-col min-h-screen font-sans transition-colors duration-500"
+  id="bgImage">
 
   <!-- Header -->
-  <header class="text-center py-8 bg-blue-700/95 dark:bg-gray-800 text-white shadow-lg relative transition-colors duration-500">
+  <header
+    class="text-center py-8 bg-blue-700/95 dark:bg-gray-800 text-white shadow-lg relative transition-colors duration-500">
     <img src="img/logo.jpeg" class="mx-auto rounded-full mb-3" alt="Logo" width="60" height="60">
     <h1 class="text-4xl sm:text-5xl font-extrabold mb-2 tracking-tight drop-shadow-md">All in One Projects</h1>
-    <p class="text-base sm:text-lg text-blue-100 dark:text-gray-300">Explore all creations organized beautifully by category</p>
-    <button id="darkModeToggle" class="absolute top-10 right-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-3 py-1 rounded-full shadow-md hover:opacity-80 transition-opacity">
+    <p class="text-base sm:text-lg text-blue-100 dark:text-gray-300">Explore all creations organized beautifully by
+      category</p>
+    <button id="darkModeToggle"
+      class="absolute top-10 right-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200 px-3 py-1 rounded-full shadow-md hover:opacity-80 transition-opacity">
       🌙
     </button>
   </header>
@@ -51,272 +70,636 @@
 
     <!-- Creative & Design -->
     <section class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 transition-colors duration-500">
-      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center gap-2">
+      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center justify-center gap-2">
         <i class="bi bi-brush text-blue-600 dark:text-blue-400 text-3xl"></i> Creative & Design
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-        <a href="https://kmuang.github.io/portfolio/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-briefcase text-xl mb-1"></i><span class="font-semibold text-xs">Portfolio</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <a href="https://.github.io/portfolio/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-briefcase text-xl mb-1"></i>
+          <span class="font-semibold text-base">Portfolio</span>
+          <span class="text-xs mt-1">Personal portfolio website</span>
         </a>
-        <a href="https://kmuang.github.io/nav-bar/" target="_blank" class="link-card bg-green-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-star text-xl mb-1"></i><span class="font-semibold text-xs">Navigate</span>
         </a>
-        <a href="https://kmuang.github.io/foto/" target="_blank" class="link-card bg-pink-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-camera text-xl mb-1"></i><span class="font-semibold text-xs">Photo Gallery</span>
+        <a href="https://kmuang.github.io/nav-bar/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-star text-xl mb-1"></i>
+          <span class="font-semibold text-base">Navigate</span>
+          <span class="text-xs mt-1">Navigation bar UI demo</span>
         </a>
-        <a href="https://kmuang.github.io/vlog/" target="_blank" class="link-card bg-purple-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-camera-reels text-xl mb-1"></i><span class="font-semibold text-xs">Vlog</span>
         </a>
-        <a href="https://kmuang.github.io/cafe/" target="_blank" class="link-card bg-yellow-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-cup-straw text-xl mb-1"></i><span class="font-semibold text-xs">Milano Café</span>
+        <a href="https://kmuang.github.io/foto/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-camera text-xl mb-1"></i>
+          <span class="font-semibold text-base">Photo Gallery</span>
+          <span class="text-xs mt-1">Image gallery showcase</span>
         </a>
-        <a href="https://kmuang.github.io/coffee/" target="_blank" class="link-card bg-red-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-cup-hot text-xl mb-1"></i><span class="font-semibold text-xs">Coffee Shop</span>
         </a>
-        <a href="https://kmuang.github.io/notification/" target="_blank" class="link-card bg-teal-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-bell text-xl mb-1"></i><span class="font-semibold text-xs">Notifications</span>
+        <a href="https://kmuang.github.io/vlog/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-violet-500 to-indigo-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-camera-reels text-xl mb-1"></i>
+          <span class="font-semibold text-base">Vlog</span>
+          <span class="text-xs mt-1">Personal video blog</span>
         </a>
-        <a href="https://kmuang.github.io/auto-dealer/" target="_blank" class="link-card bg-indigo-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-truck text-xl mb-1"></i><span class="font-semibold text-xs">Auto Dealer</span>
         </a>
-        <a href="https://kmuang.github.io/auction/" target="_blank" class="link-card bg-orange-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-hammer text-xl mb-1"></i><span class="font-semibold text-xs">Auction</span>
+        <a href="https://kmuang.github.io/cafe/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-cup-straw text-xl mb-1"></i>
+          <span class="font-semibold text-base">Milano Café</span>
+          <span class="text-xs mt-1">Café website demo</span>
         </a>
-        <a href="https://kmuang.github.io/faq/" target="_blank" class="link-card bg-blue-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-question-circle text-xl mb-1"></i><span class="font-semibold text-xs">FAQ</span>
         </a>
-        <a href="https://kmuang.github.io/bank-acc/" target="_blank" class="link-card bg-green-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-currency-dollar text-xl mb-1"></i><span class="font-semibold text-xs">Bank Account</span>
+        <a href="https://kmuang.github.io/coffee/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-cup-hot text-xl mb-1"></i>
+          <span class="font-semibold text-base">Coffee Shop</span>
+          <span class="text-xs mt-1">Coffee shop landing page</span>
         </a>
-        <a href="https://kmuang.github.io/flight/" target="_blank" class="link-card bg-pink-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-airplane text-xl mb-1"></i><span class="font-semibold text-xs">Flight Tracker</span>
         </a>
-        <a href="https://kmuang.github.io/power-school/" target="_blank" class="link-card bg-purple-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-mortarboard text-xl mb-1"></i><span class="font-semibold text-xs">Power School</span>
+        <a href="https://kmuang.github.io/notification/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-bell text-xl mb-1"></i>
+          <span class="font-semibold text-base">Notifications</span>
+          <span class="text-xs mt-1">Notification UI component</span>
         </a>
-        <a href="https://kmuang.github.io/pricing-plan/" target="_blank" class="link-card bg-yellow-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-credit-card text-xl mb-1"></i><span class="font-semibold text-xs">Pricing Plan</span>
         </a>
-        <a href="https://kmuang.github.io/finance-calc/" target="_blank" class="link-card bg-red-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-calculator text-xl mb-1"></i><span class="font-semibold text-xs">Finance Calculator</span>
+        <a href="https://kmuang.github.io/auto-dealer/" target="_blank"
+          class="link-card bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-truck text-xl mb-1"></i>
+          <span class="font-semibold text-base">Auto Dealer</span>
+          <span class="text-xs mt-1">Car dealership web app</span>
         </a>
-        <a href="https://kmuang.github.io/jersey/" target="_blank" class="link-card bg-teal-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-dribbble text-xl mb-1"></i><span class="font-semibold text-xs">Jersey</span>
         </a>
-        <a href="https://kmuang.github.io/pos/" target="_blank" class="link-card bg-indigo-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-card-image text-xl mb-1"></i><span class="font-semibold text-xs">POS System</span>
+        <a href="https://kmuang.github.io/auction/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-hammer text-xl mb-1"></i>
+          <span class="font-semibold text-base">Auction</span>
+          <span class="text-xs mt-1">Online auction platform</span>
         </a>
-        <a href="https://kmuang.github.io/compare/" target="_blank" class="link-card bg-orange-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-camera text-xl mb-1"></i><span class="font-semibold text-xs">Compare</span>
         </a>
-        <a href="https://kmuang.github.io/card/" target="_blank" class="link-card bg-blue-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-credit-card text-xl mb-1"></i><span class="font-semibold text-xs">Card UI</span>
+        <a href="https://kmuang.github.io/faq/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-600 via-teal-600 to-green-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-question-circle text-xl mb-1"></i>
+          <span class="font-semibold text-base">FAQ</span>
+          <span class="text-xs mt-1">Frequently asked questions UI</span>
         </a>
-        <a href="https://kmuang.github.io/events/" target="_blank" class="link-card bg-green-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-calendar-event text-xl mb-1"></i><span class="font-semibold text-xs">Events</span>
         </a>
-        <a href="https://kmuang.github.io/order-summary/" target="_blank" class="link-card bg-orange-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-card-checklist text-xl mb-1"></i><span class="font-semibold text-xs">Order Summary</span>
-        </a> 
+        <a href="https://kmuang.github.io/bank-acc/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-currency-dollar text-xl mb-1"></i>
+          <span class="font-semibold text-base">Bank Account</span>
+          <span class="text-xs mt-1">Bank account management UI</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/flight/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-airplane text-xl mb-1"></i>
+          <span class="font-semibold text-base">Flight Tracker</span>
+          <span class="text-xs mt-1">Track flights in real time</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/power-school/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-mortarboard text-xl mb-1"></i>
+          <span class="font-semibold text-base">Power School</span>
+          <span class="text-xs mt-1">School management system</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/pricing-plan/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-credit-card text-xl mb-1"></i>
+          <span class="font-semibold text-base">Pricing Plan</span>
+          <span class="text-xs mt-1">Pricing plan UI</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/finance-calc/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-600 via-orange-600 to-yellow-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-calculator text-xl mb-1"></i>
+          <span class="font-semibold text-base">Finance Calculator</span>
+          <span class="text-xs mt-1">Financial calculator tool</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/jersey/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-dribbble text-xl mb-1"></i>
+          <span class="font-semibold text-base">Jersey</span>
+          <span class="text-xs mt-1">Sports jersey shop UI</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/pos/" target="_blank"
+          class="link-card bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-card-image text-xl mb-1"></i>
+          <span class="font-semibold text-base">POS System</span>
+          <span class="text-xs mt-1">Point of sale system UI</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/compare/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-camera text-xl mb-1"></i>
+          <span class="font-semibold text-base">Compare</span>
+          <span class="text-xs mt-1">Product comparison UI</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/card/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-credit-card text-xl mb-1"></i>
+          <span class="font-semibold text-base">Card UI</span>
+          <span class="text-xs mt-1">Card user interface demo</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/events/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-calendar-event text-xl mb-1"></i>
+          <span class="font-semibold text-base">Events</span>
+          <span class="text-xs mt-1">Events calendar UI</span>
+        </a>
+        </a>
+        <a href="https://kmuang.github.io/order-summary/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-400 via-yellow-400 to-red-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-card-checklist text-xl mb-1"></i>
+          <span class="font-semibold text-base">Order Summary</span>
+          <span class="text-xs mt-1">Order summary UI</span>
+        </a>
+        </a>
         <!-- Add these inside the Creative & Design section's grid -->
-<a href="https://kmuang.github.io/photo-slide/" target="_blank" class="link-card bg-blue-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-images text-xl mb-1"></i><span class="font-semibold text-xs">Photo Slide</span>
-</a>
-<a href="https://kmuang.github.io/3-column/" target="_blank" class="link-card bg-green-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-columns text-xl mb-1"></i><span class="font-semibold text-xs">3 Column Layout</span>
-</a>
-<a href="https://kmuang.github.io/age-calc/" target="_blank" class="link-card bg-yellow-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-hourglass text-xl mb-1"></i><span class="font-semibold text-xs">Age Calculator</span>
-</a>
-<a href="https://kmuang.github.io/asian-restaurant/" target="_blank" class="link-card bg-pink-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-shop text-xl mb-1"></i><span class="font-semibold text-xs">Asian Restaurant</span>
-</a>
-<a href="https://kmuang.github.io/screen-time/" target="_blank" class="link-card bg-indigo-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-phone text-xl mb-1"></i><span class="font-semibold text-xs">Screen Time</span>
-</a>
-<a href="https://kmuang.github.io/2048/" target="_blank" class="link-card bg-purple-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-grid text-xl mb-1"></i><span class="font-semibold text-xs">2048 Game</span>
-</a>
-<a href="https://kmuang.github.io/clock/" target="_blank" class="link-card bg-teal-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-clock text-xl mb-1"></i><span class="font-semibold text-xs">Clock</span>
-</a>
-<a href="https://kmuang.github.io/currency/" target="_blank" class="link-card bg-orange-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-currency-exchange text-xl mb-1"></i><span class="font-semibold text-xs">Currency Converter</span>
-</a>
-<a href="https://kmuang.github.io/qrcode/" target="_blank" class="link-card bg-red-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-upc-scan text-xl mb-1"></i><span class="font-semibold text-xs">QR Code</span>
-</a>
-<a href="https://kmuang.github.io/weather/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-cloud-sun text-xl mb-1"></i><span class="font-semibold text-xs">Weather App</span>
-</a>
-<a href="https://kmuang.github.io/history/" target="_blank" class="link-card bg-green-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-journal-bookmark text-xl mb-1"></i><span class="font-semibold text-xs">History</span>
-</a>
-<a href="https://kmuang.github.io/quiz/" target="_blank" class="link-card bg-yellow-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-question-circle text-xl mb-1"></i><span class="font-semibold text-xs">Quiz</span>
-</a>
-<a href="https://kmuang.github.io/todo/" target="_blank" class="link-card bg-pink-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-list-task text-xl mb-1"></i><span class="font-semibold text-xs">Todo List</span>
-</a>
-<a href="https://kmuang.github.io/ecom/" target="_blank" class="link-card bg-purple-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-bag text-xl mb-1"></i><span class="font-semibold text-xs">E-commerce</span>
-</a>
-<a href="https://kmuang.github.io/resume/" target="_blank" class="link-card bg-teal-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-file-earmark-person text-xl mb-1"></i><span class="font-semibold text-xs">Resume</span>
-</a>
-<a href="https://kmuang.github.io/football/" target="_blank" class="link-card bg-orange-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-trophy text-xl mb-1"></i><span class="font-semibold text-xs">Football</span>
-</a>
-<a href="https://kmuang.github.io/movie/" target="_blank" class="link-card bg-red-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-film text-xl mb-1"></i><span class="font-semibold text-xs">Movie</span>
-</a>
-<a href="https://kmuang.github.io/fitness/" target="_blank" class="link-card bg-red-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-hammer text-xl mb-1"></i><span class="font-semibold text-xs">Fitness</span> 
+        <a href="https://kmuang.github.io/photo-slide/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-images text-xl mb-1"></i>
+          <span class="font-semibold text-base">Photo Slide</span>
+          <span class="text-xs mt-1">Photo slideshow gallery</span>
+        </a>
+        <a href="https://kmuang.github.io/3-column/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-columns text-xl mb-1"></i>
+          <span class="font-semibold text-base">3 Column Layout</span>
+          <span class="text-xs mt-1">Three column grid layout</span>
+        </a>
+        <a href="https://kmuang.github.io/age-calc/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-hourglass text-xl mb-1"></i>
+          <span class="font-semibold text-base">Age Calculator</span>
+          <span class="text-xs mt-1">Calculate your exact age</span>
+        </a>
+        <a href="https://kmuang.github.io/asian-restaurant/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-shop text-xl mb-1"></i>
+          <span class="font-semibold text-base">Asian Restaurant</span>
+          <span class="text-xs mt-1">Restaurant landing page</span>
+        </a>
+        <a href="https://kmuang.github.io/screen-time/" target="_blank"
+          class="link-card bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-phone text-xl mb-1"></i>
+          <span class="font-semibold text-base">Screen Time</span>
+          <span class="text-xs mt-1">Screen time tracker UI</span>
+        </a>
+        <a href="https://kmuang.github.io/2048/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-grid text-xl mb-1"></i>
+          <span class="font-semibold text-base">2048 Game</span>
+          <span class="text-xs mt-1">Classic 2048 puzzle game</span>
+        </a>
+        <a href="https://kmuang.github.io/clock/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-clock text-xl mb-1"></i>
+          <span class="font-semibold text-base">Clock</span>
+          <span class="text-xs mt-1">Digital and analog clock</span>
+        </a>
+        <a href="https://kmuang.github.io/currency/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-currency-exchange text-xl mb-1"></i>
+          <span class="font-semibold text-base">Currency Converter</span>
+          <span class="text-xs mt-1">Real-time currency converter</span>
+        </a>
+        <a href="https://kmuang.github.io/qrcode/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-upc-scan text-xl mb-1"></i>
+          <span class="font-semibold text-base">QR Code</span>
+          <span class="text-xs mt-1">QR code generator</span>
+        </a>
+        <a href="https://kmuang.github.io/weather/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-cloud-sun text-xl mb-1"></i>
+          <span class="font-semibold text-base">Weather App</span>
+          <span class="text-xs mt-1">Live weather forecast</span>
+        </a>
+        <a href="https://kmuang.github.io/history/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-journal-bookmark text-xl mb-1"></i>
+          <span class="font-semibold text-base">History</span>
+          <span class="text-xs mt-1">Historical events timeline</span>
+        </a>
+        <a href="https://kmuang.github.io/quiz/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-question-circle text-xl mb-1"></i>
+          <span class="font-semibold text-base">Quiz</span>
+          <span class="text-xs mt-1">Interactive quiz app</span>
+        </a>
+        <a href="https://kmuang.github.io/todo/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-list-task text-xl mb-1"></i>
+          <span class="font-semibold text-base">Todo List</span>
+          <span class="text-xs mt-1">Task management app</span>
+        </a>
+        <a href="https://kmuang.github.io/ecom/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-violet-500 to-indigo-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-bag text-xl mb-1"></i>
+          <span class="font-semibold text-base">E-commerce</span>
+          <span class="text-xs mt-1">Online store demo</span>
+        </a>
+        <a href="https://kmuang.github.io/resume/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-file-earmark-person text-xl mb-1"></i>
+          <span class="font-semibold text-base">Resume</span>
+          <span class="text-xs mt-1">Online resume template</span>
+        </a>
+        <a href="https://kmuang.github.io/football/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-trophy text-xl mb-1"></i>
+          <span class="font-semibold text-base">Football</span>
+          <span class="text-xs mt-1">Football stats and info</span>
+        </a>
+        <a href="https://kmuang.github.io/movie/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-film text-xl mb-1"></i>
+          <span class="font-semibold text-base">Movie</span>
+          <span class="text-xs mt-1">Movie database interface</span>
+        </a>
+        <a href="https://kmuang.github.io/fitness/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-hammer text-xl mb-1"></i>
+          <span class="font-semibold text-base">Fitness</span>
+          <span class="text-xs mt-1">Fitness tracking app</span>
+        </a>
 
-  <a href="https://kmuang.github.io/expense/" target="_blank" class="link-card bg-red-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-    <i class="bi bi-currency-dollar text-xl mb-1"></i><span class="font-semibold text-xs">Expense</span> 
-
-</a>
-<!-- React / Vercel / Netlify Apps -->
-<a href="https://portfolio-react-iota-self.vercel.app/" target="_blank" class="link-card bg-blue-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-code-slash text-xl mb-1"></i><span class="font-semibold text-xs">React Portfolio</span>
-</a>
-<a href="https://explore-pied.vercel.app/" target="_blank" class="link-card bg-green-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-compass text-xl mb-1"></i><span class="font-semibold text-xs">Explore Pied</span>
-</a>
-<a href="https://kmuang.github.io/fly/" target="_blank" class="link-card bg-yellow-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-airplane-engines text-xl mb-1"></i><span class="font-semibold text-xs">Fly App</span>
-</a>
-<a href="https://kmuang.github.io/racing/" target="_blank" class="link-card bg-pink-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-speedometer2 text-xl mb-1"></i><span class="font-semibold text-xs">Racing Game</span>
-</a>
-<a href="https://react-app-one-dun.vercel.app/" target="_blank" class="link-card bg-purple-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-app-indicator text-xl mb-1"></i><span class="font-semibold text-xs">React App One</span>
-</a>
-<a href="https://benevolent-medovik-136ce5.netlify.app/" target="_blank" class="link-card bg-teal-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-  <i class="bi bi-cup-hot text-xl mb-1"></i><span class="font-semibold text-xs">Native Coffee (404)</span>
-</a>
+        <a href="https://kmuang.github.io/expense/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-currency-dollar text-xl mb-1"></i>
+          <span class="font-semibold text-base">Expense</span>
+          <span class="text-xs mt-1">Expense tracker</span>
+        </a>
+        <!-- React / Vercel / Netlify Apps -->
+        <a href="https://portfolio-react-iota-self.vercel.app/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-600 via-teal-600 to-green-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-code-slash text-xl mb-1"></i>
+          <span class="font-semibold text-base">React Portfolio</span>
+          <span class="text-xs mt-1">Portfolio built with React</span>
+        </a>
+        <a href="https://explore-pied.vercel.app/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-compass text-xl mb-1"></i>
+          <span class="font-semibold text-base">Explore Pied</span>
+          <span class="text-xs mt-1">Exploration app demo</span>
+        </a>
+        <a href="https://kmuang.github.io/fly/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-airplane-engines text-xl mb-1"></i>
+          <span class="font-semibold text-base">Fly App</span>
+          <span class="text-xs mt-1">Flight booking app</span>
+        </a>
+        <a href="https://kmuang.github.io/racing/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-600 via-rose-600 to-red-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-speedometer2 text-xl mb-1"></i>
+          <span class="font-semibold text-base">Racing Game</span>
+          <span class="text-xs mt-1">Car racing game</span>
+        </a>
+        <a href="https://react-app-one-dun.vercel.app/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-app-indicator text-xl mb-1"></i>
+          <span class="font-semibold text-base">React App One</span>
+          <span class="text-xs mt-1">First React application</span>
+        </a>
+        <a href="https://benevolent-medovik-136ce5.netlify.app/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-cup-hot text-xl mb-1"></i>
+          <span class="font-semibold text-base">Native Coffee (404)</span>
+          <span class="text-xs mt-1">Coffee shop app (Native)</span>
+        </a>
       </div>
     </section>
 
     <!-- Education & Religion -->
     <section class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 transition-colors duration-500">
-      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center gap-2">
+      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center justify-center gap-2">
         <i class="bi bi-book text-blue-600 dark:text-blue-400 text-3xl"></i> Education & Religion
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-        <a href="https://kmuang.github.io/school/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-building text-xl mb-1"></i><span class="font-semibold text-xs">School</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <a href="https://kmuang.github.io/school/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-building text-xl mb-1"></i>
+          <span class="font-semibold text-base">School</span>
+          <span class="text-xs mt-1">School information and resources</span>
         </a>
-        <a href="https://kmuang.github.io/cd/" target="_blank" class="link-card bg-green-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-collection text-xl mb-1"></i><span class="font-semibold text-xs">Zomi Directory</span>
+        <a href="https://kmuang.github.io/cd/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-collection text-xl mb-1"></i>
+          <span class="font-semibold text-base">Zomi Directory</span>
+          <span class="text-xs mt-1">Directory of Zomi community</span>
         </a>
-        <a href="https://kmuang.github.io/church/" target="_blank" class="link-card bg-pink-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-house-heart text-xl mb-1"></i><span class="font-semibold text-xs">Church</span>
+        <a href="https://kmuang.github.io/church/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-house-heart text-xl mb-1"></i>
+          <span class="font-semibold text-base">Church</span>
+          <span class="text-xs mt-1">Church information and events</span>
         </a>
-        <a href="https://kmuang.github.io/catholiclabu/" target="_blank" class="link-card bg-purple-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-heart text-xl mb-1"></i><span class="font-semibold text-xs">Catholic Labu</span>
+        <a href="https://kmuang.github.io/catholiclabu/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-violet-500 to-indigo-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-heart text-xl mb-1"></i>
+          <span class="font-semibold text-base">Catholic Labu</span>
+          <span class="text-xs mt-1">Catholic community resources</span>
         </a>
-        <a href="https://kmuang.github.io/prayers/" target="_blank" class="link-card bg-yellow-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-bookmark-heart text-xl mb-1"></i><span class="font-semibold text-xs">Prayers</span>
+        <a href="https://kmuang.github.io/prayers/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-bookmark-heart text-xl mb-1"></i>
+          <span class="font-semibold text-base">Prayers</span>
+          <span class="text-xs mt-1">Prayer resources and guides</span>
         </a>
-        <a href="https://kmuang.github.io/discuss/" target="_blank" class="link-card bg-red-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-people text-xl mb-1"></i><span class="font-semibold text-xs">Discussion</span>
+        <a href="https://kmuang.github.io/discuss/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-people text-xl mb-1"></i>
+          <span class="font-semibold text-base">Discussion</span>
+          <span class="text-xs mt-1">Community discussion forum</span>
         </a>
-        <a href="https://kmuang.github.io/journal/" target="_blank" class="link-card bg-teal-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-journal-text text-xl mb-1"></i><span class="font-semibold text-xs">Journal</span>
+        <a href="https://kmuang.github.io/journal/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-journal-text text-xl mb-1"></i>
+          <span class="font-semibold text-base">Journal</span>
+          <span class="text-xs mt-1">Personal and community journals</span>
         </a>
-        <a href="https://kmuang.github.io/course/" target="_blank" class="link-card bg-indigo-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-laptop text-xl mb-1"></i><span class="font-semibold text-xs">Course</span>
+        <a href="https://kmuang.github.io/course/" target="_blank"
+          class="link-card bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-laptop text-xl mb-1"></i>
+          <span class="font-semibold text-base">Course</span>
+          <span class="text-xs mt-1">Online course resources</span>
         </a>
-        <a href="https://kmuang.github.io/pwd-admin/" target="_blank" class="link-card bg-orange-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-globe text-xl mb-1"></i><span class="font-semibold text-xs">Administrator</span>
+        <a href="https://kmuang.github.io/pwd-admin/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-globe text-xl mb-1"></i>
+          <span class="font-semibold text-base">Administrator</span>
+          <span class="text-xs mt-1">Admin tools and resources</span>
         </a>
       </div>
     </section>
 
     <!-- Lifestyle & Community -->
     <section class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 transition-colors duration-500">
-      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center gap-2">
+      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center justify-center gap-2">
         <i class="bi bi-people text-blue-600 dark:text-blue-400 text-3xl"></i> Lifestyle & Community
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-        <a href="https://kmuang.github.io/familydir/" target="_blank" class="link-card bg-blue-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-house-heart text-xl mb-1"></i><span class="font-semibold text-xs">Family Directory</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <a href="https://kmuang.github.io/familydir/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-house-heart text-xl mb-1"></i>
+          <span class="font-semibold text-base">Family Directory</span>
+          <span class="text-xs mt-1">Directory of families</span>
         </a>
-        <a href="https://kmuang.github.io/culture/" target="_blank" class="link-card bg-green-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-globe text-xl mb-1"></i><span class="font-semibold text-xs">Culture</span>
+        <a href="https://kmuang.github.io/culture/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-globe text-xl mb-1"></i>
+          <span class="font-semibold text-base">Culture</span>
+          <span class="text-xs mt-1">Cultural resources and info</span>
         </a>
-        <a href="https://kmuang.github.io/food/" target="_blank" class="link-card bg-pink-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-egg-fried text-xl mb-1"></i><span class="font-semibold text-xs">Food Recipes</span>
+        <a href="https://kmuang.github.io/food/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-egg-fried text-xl mb-1"></i>
+          <span class="font-semibold text-base">Food Recipes</span>
+          <span class="text-xs mt-1">Recipe collection and guides</span>
         </a>
-        <a href="https://kmuang.github.io/travel/" target="_blank" class="link-card bg-purple-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-airplane text-xl mb-1"></i><span class="font-semibold text-xs">Travel Planner</span>
+        <a href="https://kmuang.github.io/travel/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-violet-500 to-indigo-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-airplane text-xl mb-1"></i>
+          <span class="font-semibold text-base">Travel Planner</span>
+          <span class="text-xs mt-1">Travel planning tools</span>
         </a>
-        <a href="https://kmuang.github.io/my-travel/" target="_blank" class="link-card bg-yellow-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-geo-alt text-xl mb-1"></i><span class="font-semibold text-xs">My Travel</span>
+        <a href="https://kmuang.github.io/my-travel/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-geo-alt text-xl mb-1"></i>
+          <span class="font-semibold text-base">My Travel</span>
+          <span class="text-xs mt-1">Personal travel log</span>
         </a>
-        <a href="https://kmuang.github.io/review/" target="_blank" class="link-card bg-red-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-star text-xl mb-1"></i><span class="font-semibold text-xs">Client Review</span>
+        <a href="https://kmuang.github.io/review/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-star text-xl mb-1"></i>
+          <span class="font-semibold text-base">Client Review</span>
+          <span class="text-xs mt-1">Client feedback and reviews</span>
         </a>
-        <a href="https://kmuang.github.io/resort/" target="_blank" class="link-card bg-teal-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-water text-xl mb-1"></i><span class="font-semibold text-xs">Bali Resort</span>
+        <a href="https://kmuang.github.io/resort/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-water text-xl mb-1"></i>
+          <span class="font-semibold text-base">Bali Resort</span>
+          <span class="text-xs mt-1">Bali resort showcase</span>
         </a>
-        <a href="https://kmuang.github.io/cloth/" target="_blank" class="link-card bg-indigo-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-person-badge text-xl mb-1"></i><span class="font-semibold text-xs">Cloth Shop</span>
+        <a href="https://kmuang.github.io/cloth/" target="_blank"
+          class="link-card bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-person-badge text-xl mb-1"></i>
+          <span class="font-semibold text-base">Cloth Shop</span>
+          <span class="text-xs mt-1">Clothing shop UI</span>
         </a>
-        <a href="https://kmuang.github.io/employees/" target="_blank" class="link-card bg-orange-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-person text-xl mb-1"></i><span class="font-semibold text-xs">Employees</span>
+        <a href="https://kmuang.github.io/employees/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-person text-xl mb-1"></i>
+          <span class="font-semibold text-base">Employees</span>
+          <span class="text-xs mt-1">Employee directory and info</span>
         </a>
-        <a href="https://kmuang.github.io/newsletter/" target="_blank" class="link-card bg-blue-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-book text-xl mb-1"></i><span class="font-semibold text-xs">Tech News</span>
+        <a href="https://kmuang.github.io/newsletter/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-book text-xl mb-1"></i>
+          <span class="font-semibold text-base">Tech News</span>
+          <span class="text-xs mt-1">Technology news and updates</span>
         </a>
-        <a href="https://kmuang.github.io/tech-talk/" target="_blank" class="link-card bg-green-600 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-camera-reels text-xl mb-1"></i><span class="font-semibold text-xs">Tech Talks</span>
+        <a href="https://kmuang.github.io/tech-talk/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-camera-reels text-xl mb-1"></i>
+          <span class="font-semibold text-base">Tech Talks</span>
+          <span class="text-xs mt-1">Technology talk videos</span>
         </a>
-        <a href="https://kmuang.github.io/weekly-planner/" target="_blank" class="link-card bg-purple-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-calendar-week text-xl mb-1"></i><span class="font-semibold text-xs">Weekly Planner</span>
+        <a href="https://kmuang.github.io/weekly-planner/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-calendar-week text-xl mb-1"></i>
+          <span class="font-semibold text-base">Weekly Planner</span>
+          <span class="text-xs mt-1">Weekly planning tool</span>
         </a>
-        <a href="https://kmuang.github.io/trading-app/" target="_blank" class="link-card bg-red-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-bar-chart-line text-xl mb-1"></i><span class="font-semibold text-xs">Trading App</span>
+        <a href="https://kmuang.github.io/trading-app/" target="_blank"
+          class="link-card bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-bar-chart-line text-xl mb-1"></i>
+          <span class="font-semibold text-base">Trading App</span>
+          <span class="text-xs mt-1">Trading application demo</span>
         </a>
-        <a href="https://kmuang.github.io/shop-list/" target="_blank" class="link-card bg-teal-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-basket text-xl mb-1"></i><span class="font-semibold text-xs">Shop List</span>
+        <a href="https://kmuang.github.io/shop-list/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-basket text-xl mb-1"></i>
+          <span class="font-semibold text-base">Shop List</span>
+          <span class="text-xs mt-1">Shopping list manager</span>
         </a>
-        <a href="https://kmuang.github.io/music/" target="_blank" class="link-card bg-pink-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-music-note text-xl mb-1"></i><span class="font-semibold text-xs">Music</span>
+        <a href="https://kmuang.github.io/music/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-music-note text-xl mb-1"></i>
+          <span class="font-semibold text-base">Music</span>
+          <span class="text-xs mt-1">Music player and resources</span>
         </a>
-        <a href="https://kmuang.github.io/inventory/" target="_blank" class="link-card bg-indigo-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-box-seam text-xl mb-1"></i><span class="font-semibold text-xs">Inventory</span>
+        <a href="https://kmuang.github.io/inventory/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-box-seam text-xl mb-1"></i>
+          <span class="font-semibold text-base">Inventory</span>
+          <span class="text-xs mt-1">Inventory management tool</span>
         </a>
-        <a href="https://kmuang.github.io/quote/" target="_blank" class="link-card bg-yellow-400 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-chat-quote text-xl mb-1"></i><span class="font-semibold text-xs">Quote</span>
+        <a href="https://kmuang.github.io/quote/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-chat-quote text-xl mb-1"></i>
+          <span class="font-semibold text-base">Quote</span>
+          <span class="text-xs mt-1">Quote generator and collection</span>
         </a>
       </div>
     </section>
 
+
     <!-- Games -->
     <section class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 transition-colors duration-500">
-      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center gap-2">
+      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center justify-center gap-2">
         <i class="bi bi-controller text-blue-600 dark:text-blue-400 text-3xl"></i> Games
       </h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-        <a href="https://kmuang.github.io/memory-game/" target="_blank" class="link-card bg-purple-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-shuffle text-xl mb-1"></i><span class="font-semibold text-xs">Memory Game</span>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <a href="https://kmuang.github.io/memory-game/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-fuchsia-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-shuffle text-xl mb-1"></i>
+          <span class="font-semibold text-base">Memory Game</span>
+          <span class="text-xs mt-1">Classic memory card game</span>
         </a>
-        <a href="https://kmuang.github.io/tic-tac-toe/" target="_blank" class="link-card bg-red-500 dark:bg-gray-700 text-white rounded-md p-2 flex flex-col items-center text-center">
-          <i class="bi bi-x-octagon text-xl mb-1"></i><span class="font-semibold text-xs">Tic Tac Toe</span>
+
+        <a href="https://kmuang.github.io/rock-paper-scissors/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-hand-thumbs-up text-xl mb-1"></i>
+          <span class="font-semibold text-base">Rock Paper Scissors</span>
+          <span class="text-xs mt-1">Play rock-paper-scissors online</span>
+        </a>
+
+
+        <a href="https://kmuang.github.io/tic-tac-toe/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-x-octagon text-xl mb-1"></i>
+          <span class="font-semibold text-base">Tic Tac Toe</span>
+          <span class="text-xs mt-1">Play tic-tac-toe online</span>
+        </a>
+      </div>
+
+
+
+    </section>
+
+
+
+
+    <!-- Advanced Development  -->
+    <section class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 transition-colors duration-500">
+      <h2 class="text-2xl font-bold text-blue-800 dark:text-white mb-4 flex items-center justify-center gap-2">
+        <i class="bi bi-controller text-blue-600 dark:text-blue-400 text-3xl"></i> Advanced Development
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <a href="https://kmuang.github.io/art/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-palette text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Art & Advanced Development</span>
+          <span class="text-xs mt-1">Explore creative coding and advanced web projects</span>
+        </a>
+
+        <a href="https://kmuang.github.io/snap/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-500 via-cyan-500 to-green-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-camera text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Snap & Advanced Tools</span>
+          <span class="text-xs mt-1">Photo capture and advanced web utilities</span>
+        </a>
+
+        <a href="https://kmuang.github.io/gallery-reels/" target="_blank"
+          class="link-card bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-film text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Gallery Reels</span>
+          <span class="text-xs mt-1">Animated gallery reels showcase</span>
+        </a>
+        <a href="https://kmuang.github.io/blogr/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-500 via-yellow-500 to-pink-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-journal-text text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Blogr</span>
+          <span class="text-xs mt-1">Modern blog platform</span>
+        </a>
+        <a href="https://kmuang.github.io/km-robot/" target="_blank"
+          class="link-card bg-gradient-to-r from-gray-700 via-blue-700 to-green-700 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-robot text-2xl mb-2"></i>
+          <span class="font-semibold text-base">KM Robot</span>
+          <span class="text-xs mt-1">AI robot web demo</span>
+        </a>
+        <a href="https://kmuang.github.io/wallet-card/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-credit-card text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Wallet Card</span>
+          <span class="text-xs mt-1">Digital wallet card UI</span>
+        </a>
+        <a href="https://kmuang.github.io/insure/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-800 via-blue-500 to-cyan-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-shield-check text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Insure</span>
+          <span class="text-xs mt-1">Insurance web app</span>
+        </a>
+        <a href="https://kmuang.github.io/agency/" target="_blank"
+          class="link-card bg-gradient-to-r from-purple-700 via-pink-700 to-red-700 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-building text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Agency</span>
+          <span class="text-xs mt-1">Agency landing page</span>
+        </a>
+        <a href="https://kmuang.github.io/web3.0/" target="_blank"
+          class="link-card bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-globe text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Web 3.0</span>
+          <span class="text-xs mt-1">Web 3.0 demo</span>
+        </a>
+        <a href="https://kmuang.github.io/3D-soda/" target="_blank"
+          class="link-card bg-gradient-to-r from-green-700 via-blue-700 to-purple-700 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-cup-straw text-2xl mb-2"></i>
+          <span class="font-semibold text-base">3D Soda</span>
+          <span class="text-xs mt-1">3D soda can animation</span>
+        </a>
+        <a href="https://kmuang.github.io/blackbox/" target="_blank"
+          class="link-card bg-gradient-to-r from-black via-gray-800 to-gray-600 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-box text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Blackbox</span>
+          <span class="text-xs mt-1">Blackbox web utility</span>
+        </a>
+        <a href="https://kmuang.github.io/streamflow/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-water text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Streamflow</span>
+          <span class="text-xs mt-1">Streaming flow demo</span>
+        </a>
+        <a href="https://nativeapp101.netlify.app/" target="_blank"
+          class="link-card bg-gradient-to-r from-teal-500 via-green-500 to-blue-500 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-phone text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Native App 101</span>
+          <span class="text-xs mt-1">Native app showcase</span>
+        </a>
+        <a href="https://kmuang.github.io/khupcommerce/" target="_blank"
+          class="link-card bg-gradient-to-r from-orange-700 via-yellow-700 to-green-700 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-bag text-2xl mb-2"></i>
+          <span class="font-semibold text-base">KhupCommerce</span>
+          <span class="text-xs mt-1">E-commerce platform</span>
+        </a>
+        <a href="https://lively-hill-0943a5c1e.3.azurestaticapps.net/" target="_blank"
+          class="link-card bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 dark:bg-gray-700 text-white rounded-md p-4 flex flex-col items-center text-center">
+          <i class="bi bi-cloud text-2xl mb-2"></i>
+          <span class="font-semibold text-base">Azure Static App</span>
+          <span class="text-xs mt-1">Live Azure static web app</span>
         </a>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-700 dark:bg-gray-900 text-white text-center mt-auto p-8 rounded-t-3xl transition-colors duration-500">
+    <footer
+      class="bg-blue-700 dark:bg-gray-900 text-white text-center mt-auto p-8 rounded-t-3xl transition-colors duration-500">
       <div class="flex flex-col items-center gap-5 mt-2">
         <div class="flex gap-6 text-2xl">
-          <a href="https://www.facebook.com/noel.muang.3/" target="_blank" class="hover:text-blue-300"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.instagram.com/noel_muang/" target="_blank" class="hover:text-blue-300"><i class="bi bi-instagram"></i></a>
-          <a href="https://github.com/kmuang" target="_blank" class="hover:text-blue-300"><i class="bi bi-github"></i></a>
+          <a href="https://www.facebook.com/noel.muang.3/" target="_blank" class="hover:text-blue-300"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/noel_muang/" target="_blank" class="hover:text-blue-300"><i
+              class="bi bi-instagram"></i></a>
+          <a href="https://github.com/kmuang" target="_blank" class="hover:text-blue-300"><i
+              class="bi bi-github"></i></a>
         </div>
       </div>
       <div class="mt-8 text-center text-sm text-blue-100 dark:text-gray-400">
@@ -327,33 +710,14 @@
   </main>
 
   <!-- Background Image Slider -->
-  <script>
-    const bgImages = [
-      'https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1350&q=80',
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1350&q=80',
-      'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1350&q=80',
-    ];
-    let index = 0;
-    const body = document.getElementById('bgImage');
-
-    function changeBackground() {
-      body.style.backgroundImage = `url('${bgImages[index]}')`;
-      body.style.backgroundSize = 'cover';
-      body.style.backgroundPosition = 'center';
-      body.style.transition = 'background-image 1s ease-in-out';
-      index = (index + 1) % bgImages.length;
-    }
-
-    setInterval(changeBackground, 10000);
-    changeBackground(); // initial
-  </script>
+  <!-- Background image slider removed in favor of CSS pattern lines -->
 
   <!-- Dark Mode Toggle -->
   <script>
     const darkModeToggle = document.getElementById('darkModeToggle');
     darkModeToggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
-      if(document.documentElement.classList.contains('dark')){
+      if (document.documentElement.classList.contains('dark')) {
         darkModeToggle.textContent = '☀️';
       } else {
         darkModeToggle.textContent = '🌙';
@@ -362,4 +726,5 @@
   </script>
 
 </body>
+
 </html>
